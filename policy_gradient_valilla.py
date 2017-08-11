@@ -124,5 +124,5 @@ with tf.Session() as sess:
 
                 # Update our running tally of scores.
         if i % 100 == 0:
-            print(np.mean(total_reward[-100:]))
+            print("Average Rewards in last 100 attempts {}".format(np.mean(total_reward[-100:])))
         i += 1
