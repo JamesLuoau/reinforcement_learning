@@ -19,6 +19,9 @@ https://github.com/openai/gym/wiki/CartPole-v0
 
 https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724
 
+Intuitively this allows each action to be a little bit responsible for not only the immediate reward,
+but all the rewards that followed
+
 """
 
 env = gym.make('CartPole-v0')
@@ -27,7 +30,11 @@ gamma = 0.99
 
 
 def discount_rewards(r):
-    """ take 1D float array of rewards and compute discounted reward """
+    """
+    take 1D float array of rewards and compute discounted reward
+    Intuitively this allows each action to be a little bit responsible for not only the immediate reward,
+    but all the rewards that followed
+    """
     discounted_r = np.zeros_like(r)
     running_add = 0
     for t in reversed(xrange(0, r.size)):
