@@ -14,6 +14,11 @@ A set of all possible actions A from which our agent at any time will take actio
 Given a state action pair (s, a), the transition probability to a new state s’ is defined by T(s, a),
 and the reward r is given by R(s, a). As such, at any time in an MDP, an agent is given a state s,
 takes action a, and receives new state s’ and reward r.
+
+https://github.com/openai/gym/wiki/CartPole-v0
+
+https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724
+
 """
 
 env = gym.make('CartPole-v0')
